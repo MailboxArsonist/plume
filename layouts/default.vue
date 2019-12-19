@@ -1,21 +1,24 @@
 <template>
-  <div>
+  <div class="app">
     <NavBar />
     <nuxt />
+    <Footer />
   </div>
 </template>
 <script>
-import NavBar from '../components/NavBar'
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 export default {
   components: {
-    NavBar
+    NavBar,
+    Footer
   }
-}
+};
 </script>
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
