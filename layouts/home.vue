@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <NavBar />
+    <NavBar class="home" />
     <div class="main-app">
       <nuxt />
     </div>
@@ -17,6 +17,3 @@ export default {
   }
 };
 </script>
-<style>
-
-</style>

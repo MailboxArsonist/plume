@@ -1,61 +1,53 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        plumenomade
-      </h1>
-      <h2 class="subtitle">
-        My ultimate Nuxt.js project
+  <main>
+    <section class="main-intro">
+      <h2 class="page-title">
+        This is a title about why you
+        <br />
+        might need a content writer like me.
       </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+      <p>This is a <span class="highlight">paragraph</span> for more <span class="highlight">info</span> about bla bla lots of text about writing <span class="highlight">nice</span> things its <span class="highlight">valuable</span> etc etc so just <span class="highlight">fucking</span> hurry up and <span class="highlight">hire</span> me would you?</p>
+    </section>
+  </main>
 </template>
 
 <script>
-export default {};
+export default {
+  layout: "home"
+};
 </script>
 
-<style>
-.container {
+<style lang="scss" scoped>
+.main {
   margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  width: 100%;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.main-intro {
+  background: #fff;
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  padding: 4em 6em;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.page-title {
+  margin: 1.5em 0em 0.5em 0em;
+  font-size: 3em;
+  color: #F95738;
 }
 
-.links {
-  padding-top: 15px;
+.main-intro p {
+  margin: 0em 0em 2em 0em;
+  line-height: 1.8;
+  font-size: 1.6em;
+  width: 75%;
+  margin-left: 25%;
+  font-weight: 600;
 }
+
+.highlight {
+  border-bottom: 3px solid #F95738;
+}
+
 </style>

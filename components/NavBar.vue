@@ -52,7 +52,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .nav {
   display: flex;
   flex-direction: row;
@@ -67,7 +67,7 @@ export default {
   height: 9em;
   color: black;
   border-bottom: 1px solid transparent;
-  background: #fff;
+  background: transparent;
   transition: height 700ms;
 
   img {
@@ -86,6 +86,7 @@ export default {
   height: 75px;
   box-shadow: 0 10px 20px -4px rgba(0, 0, 0, 0.03);
   border-color: #fff;
+  background-color: #fff;
   transition: height 700ms;
 }
 
