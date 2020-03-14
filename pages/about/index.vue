@@ -1,8 +1,11 @@
 <template>
   <main class="main">
     <section class="about">
-      <h1>About me !</h1>
+      <h1>A Propos</h1>
       <div class="about-container">
+        <div class="about-img">
+          <img src="~/assets/img/face.jpeg" alt="headshot" />
+        </div>
         <div class="about-details">
           <p>
             Rédactrice web SEO en freelance, je me ferais un plaisir de rédiger
@@ -31,8 +34,8 @@
             sujets de société… je suis à l’écoute de tout projet et la liste ne
             demande qu’à s’allonger !
           </p>
+          <button>Hit me up CTA</button>
         </div>
-        <div class="about-img"></div>
       </div>
     </section>
   </main>
@@ -45,11 +48,51 @@ export default {};
 <style lang="scss" scoped>
 section.about {
   width: 80%;
+  max-width: 1050px;
   margin: auto;
-  padding: 4em 6em;
+  padding: 2em;
   text-align: center;
   h1 {
     font-size: 30px;
+    margin-bottom: 1.5em;
+  }
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
+.about-details {
+  // min-width: 300px;
+  text-align: left;
+  p {
+    margin-bottom: 1em;
+    line-height: 1.6em;
+    &:last-of-type {
+      margin-bottom: 2.5em;
+    }
+  }
+  button {
+    padding: 1em;
+    border: 1px solid black;
+    font-weight: 600;
+    margin: 1em auto;
+    display: block;
+    width: 250px;
+  }
+}
+.about-img {
+  min-width: 250px;
+  margin-bottom: 2em;
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
   }
 }
 </style>
