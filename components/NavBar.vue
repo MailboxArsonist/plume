@@ -72,8 +72,9 @@ export default {
 
   img {
     height: auto;
-    width: 20em;
+    width: 240px;
     margin-left: 2em;
+    min-width: 200px;
   }
 }
 
@@ -128,7 +129,8 @@ export default {
       opacity: 0;
       transition: opacity 400ms;
     }
-    &:hover {
+    &:hover,
+    &.nuxt-link-exact-active {
       &:before {
         opacity: 1;
         transition: opacity 400ms;
