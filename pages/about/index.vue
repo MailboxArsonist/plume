@@ -1,61 +1,55 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        About
-      </h1>
-      <h2 class="subtitle">
-        My ultimate Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <main class="main">
+    <section class="about">
+      <h1>About me !</h1>
+      <div class="about-container">
+        <div class="about-details">
+          <p>
+            Rédactrice web SEO en freelance, je me ferais un plaisir de rédiger
+            pour vous des textes de qualité, intéressants et optimisés pour le
+            référencement naturel. Bilingue anglais, je peux également vous
+            offrir mes services en traduction.
+          </p>
+          <p>
+            En véritable passionnée de voyage/tourisme et de gastronomie, je
+            peux vous proposer de beaux textes dans ces thématiques : articles
+            de blog, présentation de lieu, d’entreprise ou de prestations, page
+            à propos…
+          </p>
+          <p>
+            La nutrition, les produits de beauté et de soins naturels,
+            l'écologie, les modes de vie alternatifs, l’entrepreneuriat, la
+            culture et le divertissement sont également des domaines qui me
+            tiennent à cœur et dont mes connaissances sont autant d’atouts pour
+            vous garantir du contenu captivant et bien documenté.
+          </p>
+          <p>
+            Enfin, ma nature curieuse et avide de challenge m’a permis de
+            satisfaire de nombreux clients dans des domaines variés : guides
+            d'achat et comparatifs de produits, secteur du bâtiment, actualité,
+            marketing, rencontre, e-commerce, fiches produits, transports,
+            sujets de société… je suis à l’écoute de tout projet et la liste ne
+            demande qu’à s’allonger !
+          </p>
+        </div>
+        <div class="about-img"></div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style lang="scss" scoped>
+section.about {
+  width: 80%;
+  margin: auto;
+  padding: 4em 6em;
   text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  h1 {
+    font-size: 30px;
+  }
 }
 </style>
