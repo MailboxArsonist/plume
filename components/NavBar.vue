@@ -6,7 +6,9 @@
     }"
     @scroll="handleScroll"
   >
-    <img src="../assets/img/svg/plume.svg" alt="plume-icon" />
+    <nuxt-link to="/">
+      <img src="../assets/img/svg/plume.svg" alt="plume-icon" class="logo" />
+    </nuxt-link>
     <ul class="nav-links">
       <li class="nav-link">
         <nuxt-link to="/about">About</nuxt-link>
@@ -18,6 +20,39 @@
         <nuxt-link to="contact">Contact</nuxt-link>
       </li>
     </ul>
+    <div class="mobile-links">
+      <!-- Put burger here -->
+      <button class="nav-button" @click="handleMenuClick">
+        <img src="~/assets/img/svg/menu.svg" alt="menu" />
+      </button>
+      <div
+        class="panel"
+        :class="{
+          active: sideMenuOpen
+        }"
+      >
+        <ul class="nav-mobile-links">
+          <li class="nav-link">
+            <button class="nav-button">
+              <img
+                src="~/assets/img/svg/cancel.svg"
+                alt="close"
+                @click="closeMenu"
+              />
+            </button>
+          </li>
+          <li class="nav-link">
+            <nuxt-link to="/about">About</nuxt-link>
+          </li>
+          <li class="nav-link">
+            <nuxt-link to="services">Prestations</nuxt-link>
+          </li>
+          <li class="nav-link">
+            <nuxt-link to="contact">Contact</nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </template>
 
@@ -26,7 +61,8 @@ export default {
   name: "NavBar",
   data() {
     return {
-      minimizeNav: false
+      minimizeNav: false,
+      sideMenuOpen: false
     };
   },
   mounted() {
@@ -47,6 +83,12 @@ export default {
       } else if (document.body.scrollTop < 50) {
         this.minimizeNav = false;
       }
+    },
+    handleMenuClick() {
+      this.sideMenuOpen = true;
+    },
+    closeMenu() {
+      this.sideMenuOpen = false;
     }
   }
 };
@@ -70,7 +112,7 @@ export default {
   background: transparent;
   transition: height 700ms;
 
-  img {
+  .logo {
     height: auto;
     width: 240px;
     margin-left: 2em;
@@ -136,6 +178,74 @@ export default {
         transition: opacity 400ms;
       }
     }
+  }
+}
+
+.mobile-links {
+  display: none;
+  margin: 0 2em 0 auto;
+  .nav-button {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    cursor: pointer;
+    background: none;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .panel {
+    position: fixed;
+    left: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(102, 100, 100, 0.8);
+
+    &.active {
+      left: 0;
+      width: 100%;
+    }
+  }
+  .nav-mobile-links {
+    background: #fff;
+    height: 100%;
+    margin: 0;
+    margin-left: 20%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: inherit;
+    .nav-link {
+      margin-bottom: 1em;
+      margin-right: 0;
+      &:first-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile-links {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .nav {
+    height: 7em;
+    .logo {
+      width: 185px;
+      min-width: 110px;
+      margin-left: 1em;
+    }
+  }
+  .mobile-links {
+    margin-right: 1em;
   }
 }
 </style>
