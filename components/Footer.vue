@@ -2,13 +2,25 @@
   <footer class="footer">
     <p class="footer-link-title">Links</p>
     <!-- put a line here -->
-    <p class="footer-link"><a href="index.html">Home</a></p>
-    <p class="footer-link"><a href="about.html">About</a></p>
-    <p class="footer-link"><a href="prestations.html">Prestations</a></p>
-    <p class="footer-link"><a href="contact.html">Contact</a></p>
+    <p class="footer-link">
+      <nuxt-link to="/">Home</nuxt-link>
+    </p>
+    <p class="footer-link">
+      <nuxt-link to="/about">About</nuxt-link>
+    </p>
+    <p class="footer-link">
+      <nuxt-link to="/services">Prestations</nuxt-link>
+    </p>
+    <p class="footer-link">
+      <nuxt-link to="/contact">Contact</nuxt-link>
+    </p>
     <!-- links to other sites -->
     <div class="footer-follow-container">
-      <a href="#" class="footer-follow footer-link">
+      <a
+        href="https://www.linkedin.com/in/laurie-liagre-9b8271b2"
+        class="footer-follow footer-link"
+        target="_blank"
+      >
         <svg viewBox="0 0 512 512">
           <g>
             <path
@@ -18,7 +30,10 @@
           </g>
         </svg>
       </a>
-      <a href="#" class="footer-follow footer-link">
+      <a
+        href="mailto:laurie.liagre@gmail.com?Subject=From%20Website"
+        class="footer-follow footer-link"
+      >
         <svg viewBox="0 0 20 16">
           <g fill-rule="evenodd" stroke="none" stroke-width="1">
             <g transform="translate(0.000000, -85.000000)">
@@ -34,19 +49,24 @@
     </div>
     <!-- extra info -->
     <div class="footer-info">
-      <p>Copyright Laurie Liagre 2019</p>
-      <p>Site by Matthew Dodd</p>
+      <p>&copy; Laurie Liagre {{ date }}</p>
+      <p>Website designed and created by Matthew Dodd</p>
     </div>
   </footer>
 </template>
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  data() {
+    return {
+      date: 2020
+    };
+  }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .footer {
   background: #f0e2cd;
   width: 100%;
@@ -103,6 +123,9 @@ export default {
 
 .footer-info {
   margin: 1em;
+  p {
+    font-size: 1em;
+  }
 }
 
 .footer-link {
