@@ -9,13 +9,13 @@
     <img src="../assets/img/svg/plume.svg" alt="plume-icon" />
     <ul class="nav-links">
       <li class="nav-link">
-        <nuxt-link to="">About</nuxt-link>
+        <nuxt-link to="/about">About</nuxt-link>
       </li>
       <li class="nav-link">
-        <nuxt-link to="">Prestations</nuxt-link>
+        <nuxt-link to="services">Prestations</nuxt-link>
       </li>
       <li class="nav-link">
-        <nuxt-link to="">Contact</nuxt-link>
+        <nuxt-link to="contact">Contact</nuxt-link>
       </li>
     </ul>
   </nav>
