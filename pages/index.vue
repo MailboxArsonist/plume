@@ -1,12 +1,19 @@
 <template>
-  <main>
+  <main class="main">
     <section class="main-intro">
       <h2 class="page-title">
         This is a title about why you
         <br />
         might need a content writer like me.
       </h2>
-      <p>This is a <span class="highlight">paragraph</span> for more <span class="highlight">info</span> about bla bla lots of text about writing <span class="highlight">nice</span> things its <span class="highlight">valuable</span> etc etc so just <span class="highlight">fucking</span> hurry up and <span class="highlight">hire</span> me would you?</p>
+      <p>
+        This is a <span class="highlight">paragraph</span> for more
+        <span class="highlight">info</span> about bla bla lots of text about
+        writing <span class="highlight">nice</span> things its
+        <span class="highlight">valuable</span> etc etc so just
+        <span class="highlight">fucking</span> hurry up and
+        <span class="highlight">hire</span> me would you?
+      </p>
     </section>
   </main>
 </template>
@@ -18,11 +25,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
-  margin: 0 auto;
-  width: 100%;
-}
-
 .main-intro {
   background: #fff;
   text-align: left;
@@ -34,7 +36,7 @@ export default {
 .page-title {
   margin: 1.5em 0em 0.5em 0em;
   font-size: 3em;
-  color: #F95738;
+  color: #f95738;
 }
 
 .main-intro p {
@@ -47,7 +49,6 @@ export default {
 }
 
 .highlight {
-  border-bottom: 3px solid #F95738;
+  border-bottom: 3px solid #f95738;
 }
-
 </style>
