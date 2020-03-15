@@ -18,7 +18,7 @@
     <div class="footer-follow-container">
       <a
         href="https://www.linkedin.com/in/laurie-liagre-9b8271b2"
-        class="footer-follow footer-link"
+        class="footer-follow"
         target="_blank"
       >
         <svg viewBox="0 0 512 512">
@@ -32,7 +32,7 @@
       </a>
       <a
         href="mailto:laurie.liagre@gmail.com?Subject=From%20Website"
-        class="footer-follow footer-link"
+        class="footer-follow"
       >
         <svg viewBox="0 0 20 16">
           <g fill-rule="evenodd" stroke="none" stroke-width="1">
@@ -130,8 +130,52 @@ export default {
 
 .footer-link {
   transition: color 0.3s, fill 0.3s;
+  font-family: "News Cycle", sans-serif;
+  position: relative;
+  padding: 0 2em;
+  &:before {
+    content: " ";
+    display: inline-block;
+    background: url("~assets/img/svg/nav-feather.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35px;
+    margin-right: 0.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+  &:after {
+    content: " ";
+    display: inline-block;
+    background: url("~assets/img/svg/nav-feather.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35px;
+    margin-left: 0.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    right: 0;
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+  &:hover {
+    &:before,
+    &:after {
+      opacity: 1;
+      transition: opacity 400ms;
+    }
+  }
 }
-.footer-link:hover {
+.footer-follow:hover {
   transition: color 0.3s, fill 0.3s;
   color: #fff;
   fill: #fff;
