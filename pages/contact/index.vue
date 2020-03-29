@@ -1,26 +1,45 @@
 <template>
   <main class="main">
     <section class="contact">
-
       <h1>Send me an email !</h1>
-
       <div class="contact-container">
-
         <div class="contact-form">
           <label for="email">Votre email</label>
-          <input id="email" type="email" />
+          <input
+            id="email"
+            v-model="email"
+            required
+            type="email"
+            @focus="focus"
+            @input="handleInput"
+          />
 
           <label for="subject">Sujet</label>
-          <input id="subject" type="text" />
+          <input
+            id="subject"
+            v-model="subject"
+            type="text"
+            @focus="focus"
+            @input="handleInput"
+          />
 
           <label for="content">Content</label>
-          <textarea id="content" name="content" cols="30" rows="10"></textarea>
+          <textarea
+            id="content"
+            v-model="content"
+            name="content"
+            cols="30"
+            rows="10"
+            @focus="focus"
+            @input="handleInput"
+          />
 
-          <button class="button">Envoyer</button>
+          <button class="button" type="button" @click="sendEmail">
+            Envoyer
+          </button>
         </div>
 
         <div class="email-preview">
-
           <div class="preview-header">
             <span class="header-title">New Message</span>
             <div class="header-buttons">
@@ -31,24 +50,67 @@
           </div>
 
           <div class="preview-to">
-            <span class="preview-to-placeholder">Recipients</span>
+            <span
+              class="preview-to-placeholder"
+              :class="{
+                'preview-to-placeholder-styled': showEmailStyle
+              }"
+            >
+              {{ toPreview }}
+            </span>
           </div>
           <div class="preview-subject">
-            <span class="preview-subject-placeholder">Subject</span>
+            <span class="preview-subject-placeholder">
+              {{ subjectPreview }}
+            </span>
           </div>
           <div class="preview-content">
-            <div class="preview-content-placeholder"></div>
+            <textarea
+              v-model="contentPreview"
+              class="preview-content-placeholder"
+              cols="30"
+              rows="10"
+              readonly
+            />
           </div>
-          <div class="preview-actions"></div>
         </div>
-
       </div>
     </section>
   </main>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: "",
+      subject: "",
+      content: "",
+      toPreview: "Recipients",
+      subjectPreview: "Subject",
+      contentPreview: "",
+      showEmailStyle: false,
+      emailSent: false
+    };
+  },
+  methods: {
+    handleInput(evt) {
+      const target = evt.target.id;
+      if (this[target]) {
+        this[target + "Preview"] = this[target];
+      }
+    },
+    focus() {
+      this.toPreview = "laurie.liagre@gmail.com";
+      this.showEmailStyle = true;
+    },
+    sendEmail() {
+      if (this.email && this.subject && this.content) {
+        return "sending email";
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -72,6 +134,7 @@ section.contact {
 .contact-form {
   display: flex;
   flex-direction: column;
+  min-width: 330px;
   input {
     border: 2px solid #f0e2cd;
     border-radius: 5px;
@@ -107,6 +170,8 @@ section.contact {
 .email-preview {
   // background-color: red;
   width: 400px;
+  min-width: 320px;
+  margin-left: 3rem;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
@@ -143,12 +208,36 @@ section.contact {
       padding-bottom: 8px;
       display: block;
       color: #777;
+      overflow: hidden;
       box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+      &.preview-to-placeholder-styled {
+        color: #000;
+      }
+      &.preview-subject-placeholder {
+        color: #000;
+      }
     }
   }
   .preview-content {
     min-height: 375px;
     background-color: #fff;
+    padding: 1rem;
+
+    > .preview-content-placeholder {
+      word-break: break-word;
+      overflow: hidden;
+      border: 0;
+      width: 100%;
+      border: none;
+      font-size: 15px;
+      outline: none;
+
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      resize: none; /*remove the resize handle on the bottom right*/
+    }
   }
 }
 </style>
