@@ -124,7 +124,7 @@ section.contact {
   margin-bottom: 4rem;
 
   h1 {
-    font-size: 30px;
+    // font-size: 30px;
     margin-bottom: 1.5em;
     text-align: center;
   }

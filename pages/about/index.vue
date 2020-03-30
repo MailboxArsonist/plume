@@ -50,10 +50,10 @@ section.about {
   width: 80%;
   max-width: 1050px;
   margin: auto;
-  padding: 2em;
+  padding: 0 2em 2em 2em;
   text-align: center;
   h1 {
-    font-size: 30px;
+    // font-size: 30px;
     margin-bottom: 1.5em;
   }
 }
