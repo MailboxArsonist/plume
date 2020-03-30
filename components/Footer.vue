@@ -75,7 +75,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Abel", sans-serif;
+  // font-family: "Abel", sans-serif;
   color: black;
 }
 
@@ -130,7 +130,7 @@ export default {
 
 .footer-link {
   transition: color 0.3s, fill 0.3s;
-  font-family: "News Cycle", sans-serif;
+  // font-family: "News Cycle", sans-serif;
   position: relative;
   padding: 0 2em;
   &:before {

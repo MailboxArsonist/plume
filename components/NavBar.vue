@@ -148,7 +148,7 @@ export default {
   display: inline;
   margin-right: 5em;
   a {
-    font-family: "News Cycle", sans-serif;
+    // font-family: "News Cycle", sans-serif;
     font-size: 1.2em;
     font-weight: 600;
     border-bottom: 1px solid transparent;
