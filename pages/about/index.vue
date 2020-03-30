@@ -72,6 +72,7 @@ section.about {
   p {
     margin-bottom: 1em;
     line-height: 1.6em;
+    font-weight: 500;
     &:last-of-type {
       margin-bottom: 2.5em;
     }
