@@ -1,61 +1,48 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        Services
-      </h1>
-      <h2 class="subtitle">
-        My ultimate Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+  <main class="main">
+    <Service
+      v-for="service in services"
+      :key="service.title"
+      :service="service"
+      class="service"
+    />
+  </main>
 </template>
 
 <script>
-export default {};
+import Service from "../../components/Service";
+export default {
+  components: {
+    Service
+  },
+  data() {
+    return {
+      services: [
+        {
+          title: "Brand messaging",
+          message: "Timeline: 1 - 2 weeks",
+          style: "background-color: #287392",
+          content: {
+            title: "The brand collection",
+            sections: [
+              "You care deeply about your brand. But it doesn’t truly show your voice, your heart, and your vision. You need the support of a copywriting strategist to distill your voice into a brand message that genuinely connects, perfect for the business owner that wants to become fluent in their brand messaging strategy."
+            ],
+            image: "",
+            button: {
+              text: "Hit me up",
+              type: "link",
+              color: "red"
+            }
+          }
+        }
+      ]
+    };
+  }
+};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+<style lang="scss" scoped>
+.service {
+  margin: 1rem;
 }
 </style>
