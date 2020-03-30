@@ -9,13 +9,15 @@
         maybe some interesting stuff
       </h1>
     </section>
-    
     <section class="services-section">
       <Service
         v-for="service in services"
         :key="service.title"
         :service="service"
         class="service"
+        :data-aos="service.animation"
+        data-aos-once="true"
+        data-aos-duration="1000"
       />
     </section>
   </main>
@@ -35,6 +37,7 @@ export default {
           message: "Timeline: 1 - 2 weeks",
           primaryColor: "#287392",
           secondaryColor: "#1c5f7b",
+          animation: "fade-right",
           content: {
             title: "The brand collection",
             sections: [
@@ -50,6 +53,7 @@ export default {
         {
           title: "SEO optimaztion",
           message: "Timeline: 1 - 2 weeks",
+          animation: "fade-left",
           primaryColor: "#560628",
           secondaryColor: "#38061b",
           content: {
@@ -69,6 +73,7 @@ export default {
           title: "Social media management",
           message: "Timeline: 1 - 2 weeks",
           primaryColor: "#40693f",
+          animation: "fade-right",
           secondaryColor: "#3a5f39",
           content: {
             title: "Social media management stuff",
