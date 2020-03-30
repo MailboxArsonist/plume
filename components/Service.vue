@@ -49,7 +49,7 @@ export default {
 .service {
   width: 900px;
   max-width: 100%;
-  border: 1px solid rgba($color: #000000, $alpha: 0.3);
+  box-shadow: 0 -2px 8px 1px rgba(0, 0, 0, 0.04), 0 12px 20px 2px rgba(0, 0, 0, 0.12), 0 5px 16px -3px rgba(0, 0, 0, 0.05);
 
   .header {
     width: 100%;
@@ -59,6 +59,7 @@ export default {
     color: #fff;
     font-weight: 500;
     background-color: var(--primary);
+    border: 1px solid var(--primary);
 
     .title {
       font-size: 22px;
@@ -78,6 +79,9 @@ export default {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
 
     .image-container {
       width: 30%;
