@@ -47,9 +47,15 @@ export default {
 
 <style lang="scss" scoped>
 .service {
-  width: 900px;
+  width: 1000px;
   max-width: 100%;
   box-shadow: 0 -2px 8px 1px rgba(0, 0, 0, 0.04), 0 12px 20px 2px rgba(0, 0, 0, 0.12), 0 5px 16px -3px rgba(0, 0, 0, 0.05);
+
+  &:nth-child(even) {
+    .content-container {
+      flex-direction: row-reverse !important;
+    }
+  }
 
   .header {
     width: 100%;
@@ -62,7 +68,7 @@ export default {
     border: 1px solid var(--primary);
 
     .title {
-      font-size: 22px;
+      font-size: 28px;
       margin: 0rem 2rem 0rem 0rem;
       font-weight: inherit;
       font-family: "Indie Flower", cursive;
@@ -70,12 +76,13 @@ export default {
 
     .message {
       margin-left: auto;
+      font-size: 20px;
       font-family: "Indie Flower", cursive;
     }
   }
 
   .content-container {
-    padding: 1rem 2rem;
+    padding: 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -102,9 +109,9 @@ export default {
       flex-direction: column;
 
       h4 {
-        font-size: 20px;
+        font-size: 26px;
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         text-align: center;
       }
 
