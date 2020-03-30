@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p class="footer-link-title">Links</p>
+    <!-- <p class="footer-link-title">Links</p> -->
     <!-- put a line here -->
     <p class="footer-link">
       <nuxt-link to="/">Home</nuxt-link>
