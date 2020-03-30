@@ -21,7 +21,8 @@ export default {
         {
           title: "Brand messaging",
           message: "Timeline: 1 - 2 weeks",
-          style: "background-color: #287392",
+          primaryColor: "#287392",
+          hoverColor: "black",
           content: {
             title: "The brand collection",
             sections: [

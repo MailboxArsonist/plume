@@ -1,7 +1,8 @@
 <template>
-  <article class="service">
-    <div class="header" :style="service.style">
+  <article class="service" :style="cssVars">
+    <div class="header">
       <h2 class="title">{{ service.title }}</h2>
+      <span class="message">{{ service.message }}</span>
     </div>
     <div class="content-container">
       <div class="image-container">
@@ -16,9 +17,9 @@
         >
           {{ section }}
         </p>
-        <button class="content-button">
+        <nuxt-link to="contact" class="content-button">
           {{ service.content.button.text }}
-        </button>
+        </nuxt-link>
       </div>
     </div>
   </article>
@@ -33,10 +34,12 @@ export default {
       default: null
     }
   },
-  data() {
-    return {
-      date: 2020
-    };
+  computed: {
+    cssVars() {
+      return {
+        "--primary": this.service.primaryColor
+      };
+    }
   }
 };
 </script>
@@ -49,17 +52,21 @@ export default {
 
   .header {
     width: 100%;
-    height: 40px;
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
     color: #fff;
     font-weight: 500;
+    background-color: var(--primary);
 
     .title {
       font-size: 22px;
       margin: 0rem 2rem 0rem 0rem;
       font-weight: inherit;
+    }
+
+    .message {
+      margin-left: auto;
     }
   }
 
@@ -82,7 +89,26 @@ export default {
     }
     .description-container {
       width: 70%;
-      padding-left: 1rem;
+      padding-left: 2rem;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .description-section {
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+      }
+      .content-button {
+        display: inline-block;
+        padding: 0.75rem 1rem;
+        background-color: var(--primary);
+        border: 1px solid var(--primary);
+        color: #fff;
+      }
     }
   }
 }
