@@ -70,12 +70,11 @@ export default {
 .footer {
   background: #f0e2cd;
   width: 100%;
-  height: 28em;
+  height: 22em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // font-family: "Abel", sans-serif;
   color: black;
 }
 
@@ -104,11 +103,11 @@ export default {
 }
 
 .footer-follow {
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   margin: 0 1em 0 1em;
   border: 1.2px solid;
-  padding: 0.9em;
+  padding: 0.6em;
   color: black;
 }
 
