@@ -1,7 +1,9 @@
 <template>
   <main class="main">
     <section class="contact">
-      <h1>Send me an email !</h1>
+      <div class="contact-intro">
+        <h1>Contactez moi</h1>
+      </div>
       <div class="contact-container">
         <div class="contact-form">
           <label for="email">Votre email</label>
@@ -118,7 +120,8 @@ section.contact {
   width: 80%;
   max-width: 1050px;
   margin: auto;
-  padding: 2em;
+  padding: 0 2em 2em 2em;
+  margin-bottom: 4rem;
 
   h1 {
     font-size: 30px;
@@ -136,18 +139,19 @@ section.contact {
   flex-direction: column;
   min-width: 330px;
   input {
-    border: 2px solid #f0e2cd;
+    border: 1px solid #404040;
     border-radius: 5px;
     margin-bottom: 1em;
-    height: 2em;
+    height: 3em;
   }
   textarea {
-    border: 2px solid #f0e2cd;
+    border: 1px solid #404040;
     border-radius: 5px;
     margin-bottom: 1em;
   }
   label {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
+    font-weight: 600;
   }
 
   button {
@@ -163,7 +167,7 @@ section.contact {
   }
   input:focus,
   textarea:focus {
-    border-color: #f95738;
+    border-color: #636262;
   }
 }
 
