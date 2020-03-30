@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .service {
-  width: 800px;
+  width: 900px;
   max-width: 100%;
   border: 1px solid rgba($color: #000000, $alpha: 0.3);
 
@@ -64,12 +64,12 @@ export default {
       font-size: 22px;
       margin: 0rem 2rem 0rem 0rem;
       font-weight: inherit;
-      font-family: 'Indie Flower', cursive;
+      font-family: "Indie Flower", cursive;
     }
 
     .message {
       margin-left: auto;
-      font-family: 'Indie Flower', cursive;
+      font-family: "Indie Flower", cursive;
     }
   }
 

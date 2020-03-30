@@ -1,6 +1,15 @@
 <template>
   <main class="main">
-    <h1>These are the serviccees</h1>
+    <section class="intro">
+      <h1>
+        These are the serviccees
+        <br>
+        that I offer
+        <br> 
+        maybe some interesting stuff
+      </h1>
+    </section>
+    
     <section class="services-section">
       <Service
         v-for="service in services"
@@ -22,7 +31,7 @@ export default {
     return {
       services: [
         {
-          title: "Brand messaging",
+          title: "Content writing",
           message: "Timeline: 1 - 2 weeks",
           primaryColor: "#287392",
           secondaryColor: "#1c5f7b",
@@ -34,8 +43,43 @@ export default {
             image: "typing.jpg",
             button: {
               text: "Hit me up",
-              type: "link",
-              color: "red"
+              type: "link"
+            }
+          }
+        },
+        {
+          title: "SEO optimaztion",
+          message: "Timeline: 1 - 2 weeks",
+          primaryColor: "#560628",
+          secondaryColor: "#38061b",
+          content: {
+            title: "Seo stuff here",
+            sections: [
+              "You care deeply about your brand. But it doesn’t truly show your voice, your heart, and your vision.",
+              "You need the support of a copywriting strategist to distill your voice into a brand message that genuinely connects, perfect for the business owner that wants to become fluent in their brand messaging strategy.",
+            ],
+            image: "seo.jpg",
+            button: {
+              text: "Hire meeeeeeee!",
+              type: "link"
+            }
+          }
+        },
+        {
+          title: "Social media management",
+          message: "Timeline: 1 - 2 weeks",
+          primaryColor: "#40693f",
+          secondaryColor: "#3a5f39",
+          content: {
+            title: "Social media management stuff",
+            sections: [
+              "You care deeply about your brand. But it doesn’t truly show your voice, your heart, and your vision.",
+              "You need the support of a copywriting strategist to distill your voice into a brand message that genuinely connects, perfect for the business owner that wants to become fluent in their brand messaging strategy.",
+            ],
+            image: "social-media.jpg",
+            button: {
+              text: "Hire meeeeeeee!",
+              type: "link"
             }
           }
         }
@@ -46,15 +90,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.intro {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    text-align: left;
+  }
+}
+
 .service {
-  margin: 1rem;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  &:nth-child(odd) {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }
 .services-section {
   width: 90%;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
