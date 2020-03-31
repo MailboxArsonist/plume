@@ -165,10 +165,11 @@ html {
   margin-bottom: 1rem;
   h1 {
     text-align: left;
+    font-size: 50px;
   }
 
   p {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 4rem;
   }
