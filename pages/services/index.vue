@@ -9,7 +9,8 @@
         maybe some interesting stuff
       </h1>
       <p class="intro-text">Another text about the stuff that I do</p>
-
+    </section>
+    <section>
       <div class="service-links">
         <ServiceIcon
           v-for="service in services"
@@ -151,14 +152,17 @@ html {
   scroll-behavior: smooth;
 }
 .intro {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto 3rem auto;
+  width: 100%;
+  padding: 6rem;
+  background: url("~assets/img/test.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
   // flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 1rem;
   h1 {
     text-align: left;
   }
@@ -194,7 +198,7 @@ html {
   margin-bottom: 4rem;
   .service-link {
     width: 200px;
-    margin: 0 2rem; 
+    margin: 0 2rem;
   }
 }
 </style>
