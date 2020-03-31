@@ -1,8 +1,8 @@
 <template>
-  <a :href="`#${service.anchor.target}`" class="service-icon">
+  <nuxt-link :to="`#${service.anchor.target}`" class="service-icon">
     <img :src="`img/${service.anchor.icon}`" alt="service" />
     <p>{{ service.anchor.text }}</p>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>
