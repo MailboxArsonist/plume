@@ -16,9 +16,6 @@
           :key="service.title"
           :service="service"
           class="service-link"
-          data-aos="flip"
-          data-aos-once="true"
-          data-aos-duration="1000"
         />
       </div>
     </section>
@@ -118,6 +115,30 @@ export default {
               type: "link"
             }
           }
+        },
+        {
+          title: "Social media management",
+          message: "Timeline: 1 - 2 weeks",
+          primaryColor: "#40693f",
+          animation: "fade-left",
+          secondaryColor: "#3a5f39",
+          anchor: {
+            target: "social",
+            icon: "/plan.svg",
+            text: "Social Media"
+          },
+          content: {
+            title: "Social media management stuff",
+            sections: [
+              "You care deeply about your brand. But it doesn’t truly show your voice, your heart, and your vision.",
+              "You need the support of a copywriting strategist to distill your voice into a brand message that genuinely connects, perfect for the business owner that wants to become fluent in their brand messaging strategy.",
+            ],
+            image: "social-media.jpg",
+            button: {
+              text: "Hire meeeeeeee!",
+              type: "link"
+            }
+          }
         }
       ]
     };
@@ -126,6 +147,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+html {
+  scroll-behavior: smooth;
+}
 .intro {
   width: 90%;
   max-width: 1100px;
