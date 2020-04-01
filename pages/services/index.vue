@@ -11,6 +11,7 @@
       <p class="intro-text">Another text about the stuff that I do</p>
     </section>
     <section>
+      <!-- <h3>Services</h3> -->
       <div class="service-links">
         <ServiceIcon
           v-for="service in services"
@@ -151,9 +152,16 @@ export default {
 html {
   scroll-behavior: smooth;
 }
+h3 {
+  text-align: center;
+  padding: 2em;
+  text-decoration: underline;
+  font-size: 26px;
+  // color: grey;
+}
 .intro {
   width: 100%;
-  padding: 6rem;
+  padding: 5.5rem 8rem;
   background: url("~assets/img/test.jpg");
   background-position: center;
   background-size: cover;
