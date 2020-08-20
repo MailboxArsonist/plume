@@ -1,8 +1,8 @@
 <template>
   <main class="main">
     <section class="main-intro">
-      <h1>COMING SOON!</h1>
-      <!-- <h2 class="page-title">
+      <!-- <h1>COMING SOON!</h1> -->
+      <h2 class="page-title">
         This is a title about why you
         <br />
         might need a content writer like me.
@@ -12,9 +12,9 @@
         <span class="highlight">info</span> about bla bla lots of text about
         writing <span class="highlight">nice</span> things its
         <span class="highlight">valuable</span> etc etc so just
-        <span class="highlight">fucking</span> hurry up and
+        <span class="highlight">more</span> hurry up and extra text
         <span class="highlight">hire</span> me would you?
-      </p> -->
+      </p>
     </section>
   </main>
 </template>

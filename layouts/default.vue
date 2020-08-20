@@ -1,10 +1,10 @@
 <template>
   <div class="app">
-    <!-- <NavBar /> -->
+    <NavBar />
     <div class="main-app">
       <nuxt />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 <script>
