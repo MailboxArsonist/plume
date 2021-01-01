@@ -11,13 +11,16 @@
     </nuxt-link>
     <ul class="nav-links">
       <li class="nav-link">
-        <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/">Accueil</nuxt-link>
       </li>
       <li class="nav-link">
-        <nuxt-link to="services">Prestations</nuxt-link>
+        <nuxt-link to="/services">Prestations</nuxt-link>
       </li>
       <li class="nav-link">
-        <nuxt-link to="contact">Contact</nuxt-link>
+        <nuxt-link to="/about">À propos</nuxt-link>
+      </li>
+      <li class="nav-link">
+        <nuxt-link to="/contact">Contact</nuxt-link>
       </li>
     </ul>
     <div class="mobile-links">
@@ -42,10 +45,13 @@
             </button>
           </li>
           <li class="nav-link">
-            <nuxt-link to="/about">About</nuxt-link>
+            <nuxt-link to="/">Accueil</nuxt-link>
           </li>
           <li class="nav-link">
             <nuxt-link to="services">Prestations</nuxt-link>
+          </li>
+          <li class="nav-link">
+            <nuxt-link to="/about">À propos</nuxt-link>
           </li>
           <li class="nav-link">
             <nuxt-link to="contact">Contact</nuxt-link>

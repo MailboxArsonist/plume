@@ -25,7 +25,7 @@ export default {
   display: block;
   text-align: center;
   padding: 1rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   img {
     max-width: 100%;
     width: auto;
@@ -33,8 +33,8 @@ export default {
     max-width: 100%;
   }
   p {
-    margin: 1rem 0;
-    font-size: 22px;
+    margin: 1.5rem 0;
+    font-size: 18px;
     font-weight: bold;
   }
   &:hover {

@@ -1,29 +1,24 @@
 <template>
   <main class="main">
+    <section class="intro">
+      <h1 class="intro-title">
+        On discute ?
+      </h1>
+      <p class="intro-text">
+        Parlez-moi de votre projet et de vos attentes, je vous réponds sans
+        faute sous 24 heures ! Pour recevoir un devis, ou au moins une
+        fourchette de tarifs, soyez le plus précis possible dans la description
+        du projet
+      </p>
+    </section>
     <section class="contact">
-      <div class="contact-intro">
-        <h1>Contactez moi</h1>
-      </div>
       <div class="contact-container">
         <div class="contact-form">
           <label for="email">Votre email</label>
-          <input
-            id="email"
-            v-model="email"
-            required
-            type="email"
-            @focus="focus"
-            @input="handleInput"
-          />
+          <input id="email" v-model="email" required type="email" />
 
           <label for="subject">Sujet</label>
-          <input
-            id="subject"
-            v-model="subject"
-            type="text"
-            @focus="focus"
-            @input="handleInput"
-          />
+          <input id="subject" v-model="subject" type="text" />
 
           <label for="content">Content</label>
           <textarea
@@ -32,49 +27,11 @@
             name="content"
             cols="30"
             rows="10"
-            @focus="focus"
-            @input="handleInput"
           />
 
           <button class="button" type="button" @click="sendEmail">
             Envoyer
           </button>
-        </div>
-
-        <div class="email-preview">
-          <div class="preview-header">
-            <span class="header-title">New Message</span>
-            <div class="header-buttons">
-              <img src="~/assets/img/dash.png" alt="minimize" />
-              <img src="~/assets/img/arrows.png" alt="expand" />
-              <img src="~/assets/img/close.png" alt="close" />
-            </div>
-          </div>
-
-          <div class="preview-to">
-            <span
-              class="preview-to-placeholder"
-              :class="{
-                'preview-to-placeholder-styled': showEmailStyle
-              }"
-            >
-              {{ toPreview }}
-            </span>
-          </div>
-          <div class="preview-subject">
-            <span class="preview-subject-placeholder">
-              {{ subjectPreview }}
-            </span>
-          </div>
-          <div class="preview-content">
-            <textarea
-              v-model="contentPreview"
-              class="preview-content-placeholder"
-              cols="30"
-              rows="10"
-              readonly
-            />
-          </div>
         </div>
       </div>
     </section>
@@ -102,10 +59,6 @@ export default {
         this[target + "Preview"] = this[target];
       }
     },
-    focus() {
-      this.toPreview = "laurie.liagre@gmail.com";
-      this.showEmailStyle = true;
-    },
     sendEmail() {
       if (this.email && this.subject && this.content) {
         return "sending email";
@@ -116,6 +69,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.intro {
+  position: relative;
+  &::before {
+    background-image: url("~assets/img/caf.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.8;
+    content: "";
+    z-index: -1;
+  }
+}
 section.contact {
   width: 80%;
   max-width: 1050px;
@@ -124,7 +93,6 @@ section.contact {
   margin-bottom: 4rem;
 
   h1 {
-    // font-size: 30px;
     margin-bottom: 1.5em;
     text-align: center;
   }
@@ -168,80 +136,6 @@ section.contact {
   input:focus,
   textarea:focus {
     border-color: #636262;
-  }
-}
-
-.email-preview {
-  // background-color: red;
-  width: 400px;
-  min-width: 320px;
-  margin-left: 3rem;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
-    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
-
-  .preview-header {
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    background-color: #404040;
-    color: #fff;
-    font-size: 0.875rem;
-    letter-spacing: 0.2px;
-    font-weight: 500;
-
-    .header-buttons {
-      img {
-        width: 10px;
-        height: 10px;
-        opacity: 0.6;
-        margin-left: 0.6em;
-      }
-    }
-  }
-  .preview-to,
-  .preview-subject {
-    height: 36px;
-    background-color: #fff;
-    padding: 8px 16px 0px 16px;
-    > span {
-      font-size: 14px;
-      padding-bottom: 8px;
-      display: block;
-      color: #777;
-      overflow: hidden;
-      box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
-      &.preview-to-placeholder-styled {
-        color: #000;
-      }
-      &.preview-subject-placeholder {
-        color: #000;
-      }
-    }
-  }
-  .preview-content {
-    min-height: 375px;
-    background-color: #fff;
-    padding: 1rem;
-
-    > .preview-content-placeholder {
-      word-break: break-word;
-      overflow: hidden;
-      border: 0;
-      width: 100%;
-      border: none;
-      font-size: 15px;
-      outline: none;
-
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-
-      resize: none; /*remove the resize handle on the bottom right*/
-    }
   }
 }
 </style>

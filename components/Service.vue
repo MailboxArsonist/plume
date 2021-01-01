@@ -2,14 +2,14 @@
   <article class="service" :style="cssVars">
     <div class="header">
       <h2 class="title">{{ service.title }}</h2>
-      <span class="message">{{ service.message }}</span>
+      <!-- <span class="message">{{ service.message }}</span> -->
     </div>
     <div class="content-container">
       <div class="image-container">
         <img :src="`img/${service.content.image}`" alt="" />
       </div>
       <div class="description-container">
-        <h4>{{ service.content.title }}</h4>
+        <!-- <h4>{{ service.content.title }}</h4> -->
         <p
           v-for="section in service.content.sections"
           :key="section"

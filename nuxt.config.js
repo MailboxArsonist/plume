@@ -15,7 +15,8 @@ export default {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:400,500,500i,600,600i,700&display=swap"
+        href:
+          "https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quicksand:wght@300;400;500;600;700&display=swap"
       }
     ]
   },
@@ -46,5 +47,19 @@ export default {
     /*
      ** You can extend webpack config here
      */
+  },
+  router: {
+    scrollBehavior(to) {
+      if (to.hash) {
+        const yOffset = document.querySelector(".nav").clientHeight + 30;
+        const el = document.querySelector(to.hash);
+        const y = el.getBoundingClientRect().top + window.pageYOffset - yOffset;
+        return window.scrollTo({
+          top: y,
+          behavior: "smooth"
+        });
+      }
+      return window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 };

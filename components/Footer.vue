@@ -1,15 +1,14 @@
 <template>
   <footer class="footer">
-    <!-- <p class="footer-link-title">Links</p> -->
     <!-- put a line here -->
     <p class="footer-link">
-      <nuxt-link to="/">Home</nuxt-link>
-    </p>
-    <p class="footer-link">
-      <nuxt-link to="/about">About</nuxt-link>
+      <nuxt-link to="/">Accueil</nuxt-link>
     </p>
     <p class="footer-link">
       <nuxt-link to="/services">Prestations</nuxt-link>
+    </p>
+    <p class="footer-link">
+      <nuxt-link to="/about">À propos</nuxt-link>
     </p>
     <p class="footer-link">
       <nuxt-link to="/contact">Contact</nuxt-link>
@@ -60,7 +59,7 @@ export default {
   name: "Footer",
   data() {
     return {
-      date: 2020
+      date: new Date().getFullYear()
     };
   }
 };

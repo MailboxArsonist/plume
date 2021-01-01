@@ -2,16 +2,16 @@
   <main class="main">
     <section class="intro">
       <h1 class="intro-title">
-        These are the serviccees
-        <br>
-        that I offer
-        <br> 
-        maybe some interesting stuff
+        De façon plus concrète,
+        <br />
+        voici ce que je peux faire pour vous.
       </h1>
-      <p class="intro-text">Another text about the stuff that I do</p>
+      <p class="intro-text">
+        Rédaction SEO, copywriting et storytelling, stratégie de contenu et
+        réseaux sociaux, découvrez mes différents services.
+      </p>
     </section>
     <section>
-      <!-- <h3>Services</h3> -->
       <div class="service-links">
         <ServiceIcon
           v-for="service in services"
@@ -48,20 +48,20 @@ export default {
     return {
       services: [
         {
-          title: "Content writing",
-          message: "Timeline: 1 - 2 weeks",
+          title: "Rédaction SEO, Copywriting & Storytelling",
           primaryColor: "#287392",
           secondaryColor: "#1c5f7b",
           animation: "fade-right",
           anchor: {
-            target: "test",
+            target: "redaction",
             icon: "/content.svg",
-            text: "Content Writing"
+            text: "Rédaction de contenu"
           },
           content: {
-            title: "The brand collection",
             sections: [
-              "You care deeply about your brand. But it doesn’t truly show your voice, your heart, and your vision. You need the support of a copywriting strategist to distill your voice into a brand message that genuinely connects, perfect for the business owner that wants to become fluent in their brand messaging strategy."
+              "Articles de blog, pages fixes, fiches produits, catégories, page à propos, ebook, livre blanc… je rédige pour vous toutes sortes de contenus adaptés aux exigences du web. À la clé, 3 garanties : un texte optimisé, fluide et adapté à la ligne éditoriale du site, et des informations pertinentes et sourcées.",
+              "Vous pouvez me fournir un brief détaillé que je suivrais à la lettre, ou me laisser carte blanche quant à la structure et à l’optimisation SEO. Envie d’ajouter une touche de copywriting à vos pages de vente et à vos fiches produits, ou une pincée de storytelling pour raconter l’histoire de votre entreprise ?",
+              "C’est aussi dans mes cordes !"
             ],
             image: "typing.jpg",
             button: {
@@ -71,21 +71,19 @@ export default {
           }
         },
         {
-          title: "SEO optimaztion",
-          message: "Timeline: 1 - 2 weeks",
+          title: "Relecture, correction et optimisation",
           animation: "fade-left",
-          primaryColor: "#560628",
+          primaryColor: "#e0c04c",
           secondaryColor: "#38061b",
           anchor: {
-            target: "seo",
-            icon: "/blog.svg",
-            text: "SEO"
+            target: "correction",
+            icon: "blog.svg",
+            text: "Relecture et correction"
           },
           content: {
-            title: "Seo stuff here",
             sections: [
-              "You care deeply about your brand. But it doesn’t truly show your voice, your heart, and your vision.",
-              "You need the support of a copywriting strategist to distill your voice into a brand message that genuinely connects, perfect for the business owner that wants to become fluent in their brand messaging strategy.",
+              "Vous êtes en pleine création ou refonte de votre site internet et vous vous sentez perdu dans les méandres du référencement naturel ? Je vous propose un accompagnement ciblé sur la mise en place d’une stratégie de contenu efficace, pour vous permettre de gravir petit à petit les marches de la première page de Google.",
+              "Recherche de sujets et de mots clés, étude de la concurrence, élaboration du planning éditorial, rédaction et intégration des contenus dans WordPress… Confiez-moi une partie ou l’intégralité de votre stratégie de contenu SEO !"
             ],
             image: "seo.jpg",
             button: {
@@ -95,23 +93,21 @@ export default {
           }
         },
         {
-          title: "Social media management",
-          message: "Timeline: 1 - 2 weeks",
-          primaryColor: "#40693f",
-          animation: "fade-right",
-          secondaryColor: "#3a5f39",
+          title: "Stratégie de contenu SEO",
+          animation: "fade-left",
+          primaryColor: "#560628",
+          secondaryColor: "#38061b",
           anchor: {
-            target: "social",
-            icon: "/plan.svg",
-            text: "Social Media"
+            target: "seo",
+            icon: "/analyse.svg",
+            text: "SEO"
           },
           content: {
-            title: "Social media management stuff",
             sections: [
-              "You care deeply about your brand. But it doesn’t truly show your voice, your heart, and your vision.",
-              "You need the support of a copywriting strategist to distill your voice into a brand message that genuinely connects, perfect for the business owner that wants to become fluent in their brand messaging strategy.",
+              "Vous êtes en pleine création ou refonte de votre site internet et vous vous sentez perdu dans les méandres du référencement naturel ? Je vous propose un accompagnement ciblé sur la mise en place d’une stratégie de contenu efficace, pour vous permettre de gravir petit à petit les marches de la première page de Google.",
+              "Recherche de sujets et de mots clés, étude de la concurrence, élaboration du planning éditorial, rédaction et intégration des contenus dans WordPress… Confiez-moi une partie ou l’intégralité de votre stratégie de contenu SEO !"
             ],
-            image: "social-media.jpg",
+            image: "seo.jpg",
             button: {
               text: "Hire meeeeeeee!",
               type: "link"
@@ -119,21 +115,19 @@ export default {
           }
         },
         {
-          title: "Social media management",
-          message: "Timeline: 1 - 2 weeks",
+          title: "Gestion des réseaux sociaux",
           primaryColor: "#40693f",
-          animation: "fade-left",
+          animation: "fade-right",
           secondaryColor: "#3a5f39",
           anchor: {
             target: "social",
             icon: "/plan.svg",
-            text: "Social Media"
+            text: "Réseaux sociaux"
           },
           content: {
-            title: "Social media management stuff",
             sections: [
-              "You care deeply about your brand. But it doesn’t truly show your voice, your heart, and your vision.",
-              "You need the support of a copywriting strategist to distill your voice into a brand message that genuinely connects, perfect for the business owner that wants to become fluent in their brand messaging strategy.",
+              "Aujourd’hui, une marque ne peut plus se permettre de laisser ses réseaux sociaux à l’abandon. Si vous manquez de temps ou d’inspiration, j’enfile ma casquette de community manager et vous épaule sur l’animation de vos comptes professionnels.",
+              "Mes services vont de la création d’un calendrier de publication à la rédaction et à planification des posts, en passant par le recyclage et la déclinaison de contenu sous différents formats. Je peux aussi m’occuper de la préparation et de la mise en page d’une newsletter."
             ],
             image: "social-media.jpg",
             button: {
@@ -160,17 +154,34 @@ h3 {
   // color: grey;
 }
 .intro {
+  position: relative;
+  &::before {
+    background: url("~assets/img/test.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.8;
+    content: "";
+    z-index: -1;
+  }
+}
+.intro {
   width: 100%;
   padding: 5.5rem 8rem;
-  background: url("~assets/img/test.jpg");
-  background-position: center;
-  background-size: cover;
+  // background: url("~assets/img/test.jpg");
+  // background-position: center;
+  // background-size: cover;
   display: flex;
   // flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 5.5rem;
   h1 {
     text-align: left;
     font-size: 50px;
@@ -179,12 +190,14 @@ h3 {
   p {
     font-size: 26px;
     font-weight: 600;
+    line-height: 1.6;
     margin-bottom: 4rem;
+    max-width: 800px;
   }
 }
 
 .service {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   margin-left: auto;
   &:nth-child(odd) {
     margin-right: auto;
