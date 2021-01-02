@@ -1,7 +1,10 @@
 export default {
   mode: "universal",
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Plume Nomade",
+    htmlAttrs: {
+      lang: "fr"
+    },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -12,7 +15,31 @@ export default {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "apple-touch-icon",
+        href: "/favicon/apple-touch-icon.png",
+        sizes: "180x180"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon/favicon-32x32.png",
+        sizes: "32x32"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon/favicon-16x16.png",
+        sizes: "16x16"
+      },
+      { rel: "manifest", href: "/favicon/site.webmanifest" },
+      {
+        rel: "mask-icon",
+        href: "/favicon/safari-pinned-tab.svg",
+        color: "#5bbad5"
+      },
+      { name: "msapplication-TileColor", content: "#da532c" },
+      { name: "theme-color", content: "#ffffff" },
       {
         rel: "stylesheet",
         href:

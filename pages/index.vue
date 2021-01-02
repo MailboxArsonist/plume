@@ -310,10 +310,10 @@
             sujets très techniques ou dans le domaine médical/scientifique, où
             je ne saurais remplacer un véritable expert.
           </p>
-          <img src="~/assets/img/placeholder.jpg" alt="place" />
+          <img src="/img/diverse.svg" alt="service" />
         </div>
         <div class="info-block">
-          <img src="~/assets/img/placeholder.jpg" alt="place" />
+          <img src="/img/cake.svg" alt="service" />
           <p>
             Je suis bien sûr plus à l’aise sur certaines thématiques, où mon
             expérience personnelle et mes propres connaissances viennent ajouter
@@ -329,7 +329,7 @@
             contenus ! Pour en savoir plus et découvrir mes prestations, c’est
             par ici.
           </p>
-          <img src="~/assets/img/placeholder.jpg" alt="place" />
+          <img src="/img/improve.svg" alt="service" />
         </div>
       </div>
     </section>
@@ -444,14 +444,14 @@ export default {
   margin-bottom: 7rem;
 
   p {
-    max-width: 400px;
+    max-width: 500px;
     font-size: 1.2em;
     font-weight: 600;
     margin: 0;
   }
 
   img {
-    max-width: 400px;
+    max-width: 300px;
     margin: 2rem 4rem;
     border-radius: 10px;
   }

@@ -45,26 +45,35 @@ export default {
       email: "",
       subject: "",
       content: "",
-      toPreview: "Recipients",
-      subjectPreview: "Subject",
-      contentPreview: "",
-      showEmailStyle: false,
       emailSent: false
     };
   },
   methods: {
-    handleInput(evt) {
-      const target = evt.target.id;
-      if (this[target]) {
-        this[target + "Preview"] = this[target];
-      }
-    },
+    // handleInput(evt) {
+    //   const target = evt.target.id;
+    //   if (this[target]) {
+    //     this[target + "Preview"] = this[target];
+    //   }
+    // },
     sendEmail() {
       if (this.email && this.subject && this.content) {
+        this.emailSent = true;
         return "sending email";
       }
     }
-  }
+  },
+  head() {
+    return {
+      title: "Plume Nomade | Contact",
+      meta: [
+        {
+          hid: "contact",
+          name: "contact description",
+          content: "contact description content"
+        }
+      ]
+    };
+  },
 };
 </script>
 
@@ -86,9 +95,6 @@ export default {
   }
 }
 section.contact {
-  width: 80%;
-  max-width: 1050px;
-  margin: auto;
   padding: 0 2em 2em 2em;
   margin-bottom: 4rem;
 
