@@ -49,7 +49,10 @@
     <!-- extra info -->
     <div class="footer-info">
       <p>&copy; Laurie Liagre {{ date }}</p>
-      <p>Website designed and created by Matthew Dodd</p>
+      <p>
+        Website by
+        <a href="https://matthewdodd.net/" target="_blank"> Matthew Dodd</a>
+      </p>
     </div>
   </footer>
 </template>
@@ -128,7 +131,6 @@ export default {
 
 .footer-link {
   transition: color 0.3s, fill 0.3s;
-  // font-family: "News Cycle", sans-serif;
   position: relative;
   padding: 0 2em;
   &:before {

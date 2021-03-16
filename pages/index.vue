@@ -159,7 +159,7 @@
       <div class="motivation-block">
         <img src="~/assets/img/type-writer.jpg" alt="type-writer" />
         <div class="text-block">
-          <h4>Title goes here</h4>
+          <h4>Voici mon offre</h4>
           <p>
             Fascinée par la richesse de notre belle langue française, mes
             prestations ne s’arrêtent pas à la rédaction SEO.
@@ -346,7 +346,7 @@ export default {
 .intro {
   position: relative;
   &::before {
-    background-image: url("~assets/img/caf.jpeg");
+    background-image: url("~assets/img/index.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -354,7 +354,7 @@ export default {
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.8;
+    opacity: 0.7;
     content: "";
     z-index: -1;
   }
@@ -368,6 +368,7 @@ export default {
 .motivation-block {
   background-color: rgba($color: #fbdaa9, $alpha: 0.4);
   display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: center;
   padding: 5em 1em;
@@ -439,6 +440,7 @@ export default {
 
 .info-block {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 7rem;
@@ -451,9 +453,56 @@ export default {
   }
 
   img {
-    max-width: 300px;
+    width: 300px;
+    max-width: 100%;
     margin: 2rem 4rem;
     border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .section-main {
+    padding-bottom: 0;
+  }
+  .section-main .container {
+    padding: 3rem 1.5rem 0rem 1.5rem;
+  }
+  .svg-intro-container {
+    margin: 3rem auto;
+  }
+  .motivation-block {
+    padding: 4em 1em 7em 1em;
+    margin-bottom: 0;
+
+    .text-block {
+      margin-left: 0;
+      padding: 0rem 1.5rem;
+    }
+  }
+  .list-container {
+    background-color: #8c1a1a;
+    color: #fff;
+    margin-bottom: 4em;
+    padding: 3em 1.2em;
+    p {
+      font-size: 22px;
+    }
+    li {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .info-block {
+    margin-bottom: 5rem;
+    p {
+      margin-bottom: 3rem;
+    }
+    img {
+      max-width: 90%;
+      margin: 1rem auto;
+    }
+    &:nth-of-type(2) {
+      flex-wrap: wrap-reverse;
+    }
   }
 }
 </style>

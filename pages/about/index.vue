@@ -188,7 +188,7 @@
           </p>
           <button>
             <nuxt-link to="/contact">
-              Hit me up CTA
+              Ca vous interesse ?
             </nuxt-link>
           </button>
         </div>
@@ -206,21 +206,35 @@ export default {
         {
           hid: "about",
           name: "about description",
-          content: "about description content"
+          content:
+            "J’exerce le métier de rédacteur web depuis février 2019. Avant cela, j’ai travaillé dans le domaine de la communication événementielle, au sein de diverses structures culturelles et artistiques."
         }
       ]
     };
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .intro {
-  background: url("~assets/img/caf.jpeg");
   margin-bottom: 3em;
+  position: relative;
+  &::before {
+    background: url("~assets/img/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+    content: "";
+    z-index: -1;
+  }
 }
 section.about {
-  width: 80%;
   max-width: 1050px;
   margin: auto;
   padding: 0 2em 2em 2em;
@@ -272,17 +286,20 @@ section.about {
   button {
     padding: 1em;
     border: 2px solid #8c1a1a;
-    color: #8c1a1a;
+    color: #fff;
     font-weight: 800;
     cursor: pointer;
     margin: 1em auto;
     display: block;
     width: 250px;
-    background: #fff;
+    border-radius: 50px;
+    background: #8c1a1a;
     margin-bottom: 2rem;
+    transition: all 100ms linear;
     &:hover {
       border: 2px solid #6d1212;
       color: #6d1212;
+      background: #fff;
     }
   }
 }
@@ -294,6 +311,28 @@ section.about {
     max-width: 100%;
     height: auto;
     border-radius: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap-reverse;
+
+    > div {
+      min-width: unset;
+      width: 100%;
+      &.info-container {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .intro::before {
+    background-position: bottom;
   }
 }
 </style>

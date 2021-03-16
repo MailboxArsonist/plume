@@ -24,10 +24,17 @@
       </li>
     </ul>
     <div class="mobile-links">
-      <!-- Put burger here -->
-      <button class="nav-button" @click="handleMenuClick">
-        <img src="~/assets/img/svg/menu.svg" alt="menu" />
-      </button>
+      <div
+        id="nav-icon1"
+        :class="{
+          open: sideMenuOpen
+        }"
+        @click="handleMenuClick"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div
         class="panel"
         :class="{
@@ -35,15 +42,6 @@
         }"
       >
         <ul class="nav-mobile-links">
-          <li class="nav-link">
-            <button class="nav-button">
-              <img
-                src="~/assets/img/svg/cancel.svg"
-                alt="close"
-                @click="closeMenu"
-              />
-            </button>
-          </li>
           <li class="nav-link">
             <nuxt-link to="/">Accueil</nuxt-link>
           </li>
@@ -91,7 +89,7 @@ export default {
       }
     },
     handleMenuClick() {
-      this.sideMenuOpen = true;
+      this.sideMenuOpen = !this.sideMenuOpen;
     },
     closeMenu() {
       this.sideMenuOpen = false;
@@ -204,13 +202,12 @@ export default {
   .panel {
     position: fixed;
     left: 100%;
-    height: 100%;
-    top: 0;
-    background-color: rgba(102, 100, 100, 0.8);
+    top: 112px;
+    transition: left 200ms;
+    width: 100%;
 
     &.active {
       left: 0;
-      width: 100%;
     }
   }
   .nav-mobile-links {
@@ -223,11 +220,13 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     color: inherit;
+    box-shadow: -8px 18px 15px 1px rgba(0,0,0,0.2);
+    border-radius: 10px;
     .nav-link {
       margin-bottom: 1em;
       margin-right: 0;
-      &:first-child {
-        text-align: right;
+      &:first-of-type {
+        margin-top: 1em;
       }
     }
   }
@@ -235,7 +234,10 @@ export default {
 
 @media (max-width: 900px) {
   .mobile-links {
-    display: block;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
   }
   .nav-links {
     display: none;
@@ -245,7 +247,6 @@ export default {
   .nav {
     height: 7em;
     .logo {
-      width: 185px;
       min-width: 110px;
       margin-left: 1em;
     }
@@ -253,5 +254,53 @@ export default {
   .mobile-links {
     margin-right: 1em;
   }
+}
+#nav-icon1 {
+  width: 32px;
+  height: 29px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 12px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 24px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 12px;
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 12px;
+  transform: rotate(-135deg);
 }
 </style>

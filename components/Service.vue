@@ -2,14 +2,12 @@
   <article class="service" :style="cssVars">
     <div class="header">
       <h2 class="title">{{ service.title }}</h2>
-      <!-- <span class="message">{{ service.message }}</span> -->
     </div>
     <div class="content-container">
       <div class="image-container">
         <img :src="`img/${service.content.image}`" alt="" />
       </div>
       <div class="description-container">
-        <!-- <h4>{{ service.content.title }}</h4> -->
         <p
           v-for="section in service.content.sections"
           :key="section"
@@ -127,9 +125,41 @@ export default {
         color: #fff;
         margin: 1rem auto;
         transition: all 600ms;
+        text-align: center;
         &:hover {
           background-color: var(--secondary);
           border-color: var(--secondary);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .service {
+    .header .title {
+      margin-right: 0;
+      font-size: 23px;
+    }
+    .content-container {
+      padding: 0;
+      flex-direction: column;
+
+      .image-container {
+        width: 100%;
+      }
+
+      .description-container {
+        width: 100%;
+        padding: 1rem;
+
+        .description-section {
+          font-size: 1.1rem;
+          line-height: 1.5;
+        }
+
+        .content-button {
+          width: 90%;
         }
       }
     }

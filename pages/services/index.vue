@@ -202,7 +202,7 @@ export default {
           title: "Rédaction SEO, Copywriting & Storytelling",
           primaryColor: "#287392",
           secondaryColor: "#1c5f7b",
-          animation: "fade-right",
+          animation: "zoom-in",
           anchor: {
             target: "redaction",
             icon: "/create.svg",
@@ -216,14 +216,14 @@ export default {
             ],
             image: "typing.jpg",
             button: {
-              text: "Hit me up",
+              text: "Contactez-moi pour plus d'info/tarifs",
               type: "link"
             }
           }
         },
         {
           title: "Relecture, correction et optimisation",
-          animation: "fade-left",
+          animation: "zoom-in",
           primaryColor: "#e0c04c",
           secondaryColor: "#38061b",
           anchor: {
@@ -238,14 +238,14 @@ export default {
             ],
             image: "seo.jpg",
             button: {
-              text: "Hire meeeeeeee!",
+              text: "En savoir plus",
               type: "link"
             }
           }
         },
         {
           title: "Stratégie de contenu SEO",
-          animation: "fade-left",
+          animation: "zoom-in",
           primaryColor: "#560628",
           secondaryColor: "#38061b",
           anchor: {
@@ -260,7 +260,7 @@ export default {
             ],
             image: "seo.jpg",
             button: {
-              text: "Hire meeeeeeee!",
+              text: "Votre stratégie de contenu SEO c'est par ici !",
               type: "link"
             }
           }
@@ -268,7 +268,7 @@ export default {
         {
           title: "Gestion des réseaux sociaux",
           primaryColor: "#40693f",
-          animation: "fade-right",
+          animation: "zoom-in",
           secondaryColor: "#3a5f39",
           anchor: {
             target: "social",
@@ -282,7 +282,7 @@ export default {
             ],
             image: "social-media.jpg",
             button: {
-              text: "Hire meeeeeeee!",
+              text: "Ca vous interesse ?",
               type: "link"
             }
           }
@@ -295,9 +295,10 @@ export default {
       title: "Plume Nomade | Prestations",
       meta: [
         {
-          hid: "services",
-          name: "seervices description",
-          content: "seervices description content"
+          hid: "Prestations",
+          name: "Prestations description",
+          content:
+            "Rédaction SEO, copywriting et storytelling, stratégie de contenu et réseaux sociaux."
         }
       ]
     };
@@ -314,10 +315,16 @@ h3 {
   padding: 2em;
   text-decoration: underline;
   font-size: 26px;
-  // color: grey;
 }
+
 .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 5.5rem;
   position: relative;
+
   &::before {
     background: url("~assets/img/test.jpg");
     background-repeat: no-repeat;
@@ -332,19 +339,7 @@ h3 {
     content: "";
     z-index: -1;
   }
-}
-.intro {
-  width: 100%;
-  padding: 5.5rem 8rem;
-  // background: url("~assets/img/test.jpg");
-  // background-position: center;
-  // background-size: cover;
-  display: flex;
-  // flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin-bottom: 5.5rem;
+
   h1 {
     text-align: left;
     font-size: 50px;
@@ -388,12 +383,9 @@ h3 {
 }
 .services-conclusion {
   position: relative;
-  // background-color: #8C1A1A;
-  // border: 1px solid #8C1A1A;
-  // color: #fff;
   padding: 0rem 1rem 2rem 1rem;
   margin-bottom: 4rem;
-  // opacity: 0.9;
+
   .svg-intro-container {
     display: flex;
     justify-content: center;
@@ -410,10 +402,29 @@ h3 {
     margin-bottom: 2em;
   }
   p {
-    // font-size: 18px;
     font-weight: 600;
     line-height: 1.4;
     margin-bottom: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .intro {
+    margin-bottom: 2.5rem;
+  }
+  .service-links {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    .service-link {
+      width: 100px;
+      margin: 0 1.2rem;
+      padding: 1rem 0;
+
+      .img {
+        height: unset;
+      }
+    }
   }
 }
 </style>
